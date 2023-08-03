@@ -1,0 +1,18 @@
+.banner-container {
+    display: flex;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-h1{
+    display: flex;
+    color: white;
+    background-color: #D05353;
+    width: 500px;
+    height: 100px;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
