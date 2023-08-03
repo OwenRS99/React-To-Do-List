@@ -1,21 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header/Header';
 import Banner from './Banner/Banner';
-import List_Item from './List_Item/List_Item';
+import List from './List/List';
+import ListItem from './ListItem/ListItem';
+
+const App = () => {
+  const [addedComponents, setAddedComponents] = useState([]);
+
+  const addComponent = () => {
+    setAddedComponents([...addedComponents, <ListItem key={addedComponents.length} />]);
+  };
+
+  return (
+    <React.StrictMode>
+      <Header />
+      <Banner />
+      <List add={addComponent} addedComponents={addedComponents} />
+    </React.StrictMode>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Header />
-    <Banner />
-    <List_Item />
-  </React.StrictMode>
+  <App />
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

@@ -1,17 +1,19 @@
 import React from "react";
+import ListItem from "../ListItem/ListItem";
 import './List.css'
 
 const List = (props) => {
-    return (
-        <div className="container">
-                <ul>
-                    <form>
-                        <input type="checkbox" name="check-box"></input>
-                        <input type="text" name="text"></input>
-                    </form>
-                </ul>
-        </div>   
-    )
+  return (
+    <div className="list_item-container">
+      <div className="list">
+        {props.addedComponents.map((component, index) => (
+          <div key={index} className="list-item">
+            {component}
+          </div>
+        ))}
+        <button className="list-button" onClick={props.add}>Add</button>
+      </div>
+    </div>
+  )
 }
-
 export default List;
