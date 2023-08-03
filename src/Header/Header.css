@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-button {
+.today-date, .work-date {
     height: 50px;
     width: 150px;
     padding: 5px;

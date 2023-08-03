@@ -4,12 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header/Header';
 import Banner from './Banner/Banner';
+import List_Item from './List_Item/List_Item';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
     <Banner />
+    <List_Item />
   </React.StrictMode>
 );
 
